@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-main: #443850;
+    --color-primary: #bbbe64;
+    --color-secondary: #3c3c3b;
+    --color-primary-low: rgba(4,240,106,0.5);
+    --color-bg: var(--color-main);
+    --color-success: #3A5A40;
+    --color-danger: #FF3847;
+    --color-line: #A3B18A;
+    --color-shadow-active: white;
+    --color-active: #e9c46a;
+    --color-active-low: rgba(233,196,106,0.5);
+    --color-light: #FBFBFD;
+    --color-font: #24231E;
+}
+
+body {
+    margin: 0;
+}
+
+button:disabled {
+    opacity: 0.5 !important;
+}
+
+button:disabled:hover {
+    cursor: auto !important;
+}
