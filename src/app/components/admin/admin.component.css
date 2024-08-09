@@ -1,0 +1,75 @@
+.main {
+    height: 100vh;
+}
+
+.main header {
+    background-color: var(--color-main);
+    color: white;
+    padding: 0.25rem;
+}
+
+.main header .title {
+    text-align: center;
+}
+
+.logout {
+    display: flex;
+    justify-content: end;
+}
+
+.main .logout a {
+    text-decoration: underline;
+    margin: 1rem 1rem 0 0;
+}
+
+.main .logout a:hover {
+    cursor: pointer;
+}
+
+.main .container {
+    /* background-color: red;
+    height: 100%; */
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.main .container table {
+    width: 90%;
+}
+
+.main .container table thead {
+    background-color: var(--color-main);
+    color: white;
+}
+
+.main .container table thead th {
+    padding: 0.5rem;
+    border: 0;
+}
+
+tr:last-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table tbody tr td {
+    border-bottom: 1px solid black;
+}
+
+table tbody .actions button {
+    padding: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+    border-radius: 9px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+table tbody .actions button:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}

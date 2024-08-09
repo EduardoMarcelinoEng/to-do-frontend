@@ -1,0 +1,27 @@
+<div class="main">
+    <header>
+        <h2 class="title">Lista de tarefas</h2>
+    </header>
+    <div class="logout">
+        <a (click)="logout()">Sair</a>
+    </div>
+    <div class="container">
+        <table *ngIf="tasks.length > 0">
+            <thead>
+                <tr>
+                    <th class="description" width="80%">Descrição</th>
+                    <th class="actions">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let task of tasks; let i = index;">
+                    <td>{{task.description}}</td>
+                    <td class="actions">
+                        <button>Concluir tarefa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p *ngIf="tasks.length === 0">Não há tarefas pendentes.</p>
+    </div>
+</div>
