@@ -9,5 +9,5 @@
 
 # 1.2 - Execução em conjunto com o backend
 -Atribuir o valor "" para a variável urlBase no arquivo src/config.ts;
--Executar npm run build;
+-Executar `npm run build`, sem as aspas;
 -Após finalizar o comando `npm run build`, levar a pasta dist gerada para a raiz do backend.
