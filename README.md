@@ -1,5 +1,7 @@
 # 1 - Execução do frontend
+-Instalar Nodejs v20 ou superior
 -Caso você não tenha a linha de comando do Angular instalado em sua máquina, execute o comando `npm install -g @angular/cli`, sem as aspas
+-Clonar repositório frontend, branch master
 -Executar na raiz do projeto frontend o comando `npm install`, sem as aspas;
 -É possível executar o frontend (Angular) como uma aplicação separada do backend, ou junto do backend (através da geração do build do Angular);
 
