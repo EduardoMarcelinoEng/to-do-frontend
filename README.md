@@ -12,4 +12,5 @@
 # 1.2 - Execução em conjunto com o backend
 -Atribuir o valor "" para a variável urlBase no arquivo src/config.ts;
 -Executar `npm run build`, sem as aspas;
--Após finalizar o comando `npm run build`, levar a pasta dist gerada para a raiz do backend.
+-Após finalizar o comando `npm run build`, levar a pasta dist que foi gerada na raiz do frontend para a raiz do backend.
+-Com isso, o frontend poderá ser acessado com a mesma url do backend. Exemplo: http://localhost:8888/login
