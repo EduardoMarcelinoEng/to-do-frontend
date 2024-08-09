@@ -6,22 +6,52 @@
         <a (click)="logout()">Sair</a>
     </div>
     <div class="container">
-        <table *ngIf="tasks.length > 0">
-            <thead>
-                <tr>
-                    <th class="description" width="80%">Descrição</th>
-                    <th class="actions">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let task of tasks; let i = index;">
-                    <td>{{task.description}}</td>
-                    <td class="actions">
-                        <button (click)="markAsDone($event, task.id)">Concluir tarefa</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <p *ngIf="tasks.length === 0">Não há tarefas pendentes.</p>
+        <div class="row">
+            <div class="modal-container">
+                <input id="modal-toggle" type="checkbox">
+                <button>Criar tarefa</button>
+                <div class="modal-backdrop">
+                  <div class="modal-content">
+                    <label class="modal-close" for="modal-toggle">x</label>
+                    <h2>Incluir tarefa</h2>
+                    <hr />
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <input name="description" placeholder="Digite a descrição da tarefa" />
+                    </div>
+                    <div class="form-group">
+                        <label>Prioridade</label>
+                        <select name="priority">
+                            <option>Baixa</option>
+                            <option>Média</option>
+                            <option>Alta</option>
+                        </select>
+                    </div>
+                    <button (click)="createTask($event)" class="button create-task" for="modal-toggle">Criar</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <table *ngIf="tasks.length > 0">
+                <thead>
+                    <tr>
+                        <th class="description" width="70%">Descrição</th>
+                        <th class="description">Prioridade</th>
+                        <th class="actions">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let task of tasks; let i = index;">
+                        <td>{{task.description}}</td>
+                        <td>{{task.priority}}</td>
+                        <td class="actions">
+                            <button (click)="markAsDone($event, task.id)">Concluir tarefa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p *ngIf="tasks.length === 0">Não há tarefas pendentes.</p>
+        </div>
     </div>
 </div>
